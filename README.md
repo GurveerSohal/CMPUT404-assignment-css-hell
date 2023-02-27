@@ -21,7 +21,7 @@ repository and (C) 2013 Abram Hindle visibile in the text.
 
 All the css and html files in this repository are copyright Gurveer Sohal (C) 2023 under the CC-BY-SA
 4.0 unported license. Attribution should be a hyperlink to the
-repository and (C) Gurveer Sohal visible in the text.
+repository and (C) Gurveer Sohal 2023 visible in the text.
 
 Code is licensed under the Apache 2.0 license.
 
@@ -38,3 +38,5 @@ References
 I included the links that I got the colors and some css from in the comments in the css and html files
 
 I got the idea for the index.html from Adam Ahmed avahmed@ualberta.ca
+
+Hosted at gurveersohal.github.io/CMPUT404-assignment-css-hell/
