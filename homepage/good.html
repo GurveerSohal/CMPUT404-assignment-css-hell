@@ -5,12 +5,25 @@
     <title>Good page</title>
     <style>
         * {
-            font-family: 'Times New Roman', Times, serif;;
+            font-family: 'Times New Roman', Times, serif;
+            color: #dddddd;
         }
 
+        /* https://www.canva.com/learn/website-color-schemes/ */
+        /* https://cssgradient.io/swatches/ */
+        /* https://cssgradient.io */
+
+        html {
+            background: linear-gradient(90deg, #3F2B96 0%, #789dfc 100%);
+        }
+
+        body {
+            padding-bottom: 50pt;
+        }
         .name {
             text-align: center;
             font-size: 50pt;
+            color: #dddddd;
         }
         .content {
             flex-basis: 95%;
@@ -30,7 +43,7 @@
             align-items: center;
             justify-content: space-evenly;
         }
-        .about {
+        .about, .workexp, .courses, .skills {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,23 +51,11 @@
             text-align: justify;
         }
 
-        .workexp {
-            text-align: justify;
-        }
-
-
-        .courses {
-            text-align: justify;
-        }
-
-
-        .skills {
-            text-align: justify;
-        }
-
         h1 {
-            align-self: flex-start;
+            text-align: center;
             padding-left: 20pt;
+            font-size: 35pt;
+            color: #fc4a1a;
         }
 
         img {
@@ -63,12 +64,41 @@
             height: 200pt;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 15pt ;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #fc4a1a;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 10pt;
+        }
+
         .content p {
             padding-left: 50pt;
+            width: 75%;
         }
 
         .sectionheader {
             padding-left: 35pt;
+            font-size: 18pt;
+        }
+
+        hr {
+            background-color: black;
+            width: 40%;
+            border:0;
+            height:1pt;
+            margin-bottom: 30pt;
         }
     </style>
 </head>
@@ -78,7 +108,7 @@
         <div class="sidebar">
 
             <br>
-            <b>TLDR</b>
+            <b style="color: #fc4a1a;">TLDR</b>
 
             <p>Third Year Computing Science UAlberta</p>
 
@@ -86,7 +116,7 @@
 
             <p>Full Stack Development</p>
 
-            <b>Experience</b>
+            <b style="color: #fc4a1a;">Experience</b>
             <p>Teaching Assistant</p>
             <p>Research Assistant</p>
             <p>Front-end Developer</p>
@@ -94,10 +124,12 @@
 
         <div class="content">
             <h1 class="name">Gurveer Singh Sohal</h1>
-            <a onclick="location.href='#about'">About</a>
-            <a onclick="location.href='#workexp'">Experience</a>
-            <a onclick="location.href='#skills'">Skills</a>
-            <a onclick="location.href='#courses'">Coursework</a>
+            <nav>
+                <a onclick="location.href='#about'">About</a>
+                <a onclick="location.href='#workexp'">Experience</a>
+                <a onclick="location.href='#skills'">Skills</a>
+                <a onclick="location.href='#courses'">Coursework</a>
+             </nav>
             <div class="about" id="about">
                 <h1> About </h1>
                 <p>
@@ -107,8 +139,10 @@
                 <img src="./GurveerSinghSohal.jpg" alt="this is my picture"/>
             </div>
 
-            <div class="workexp" class="id">
+            <div class="workexp" id="workexp">
                 <h1> Work Experience </h1>
+
+                <hr>
 
                 <b class="sectionheader"> Teaching Assistant, University of Alberta</b>
 
@@ -118,6 +152,8 @@
                     I am also part of the team that marks assignments.
                 </p>
 
+                <hr>
+                
                 <b class="sectionheader"> Research Assistant, University of Alberta</b>
 
                 <p class="workdescription">
@@ -126,6 +162,8 @@
                     The user can create a valid polygonal room of their choice and see the animated path of light as it avoids the unilluminable points. 
                     I also worked on several <a href="https://www.youtube.com/watch?v=EBgR1FKKRkc">videos</a> to demonstrate the applications, which got over 10,000 views combined.
                 </p>
+
+                <hr>
 
                 <b class="sectionheader"> Front-end Developer, UofA Blueprint</b>
 
@@ -151,6 +189,8 @@
             <div class="courses" id="courses">
                 <h1>Coursework</h1>
 
+                <hr>
+
                 <b class="sectionheader">CMPUT 415</b>
 
                 <p class="coursetext">
@@ -166,10 +206,13 @@
                         <li>Go through the abstract syntax tree and do code emission. In our case we generated LLVM IR.</li>
                     </ul>
 
+                    <p>
                     From there on, the LLVM IR can be converted into any assembly level backend. There are also compiler optimizations that can be performed here,
                     but I only learnt about the theory behind it, we didn't implement it.
+                    </p>
                 </p>
 
+                <hr>
 
                 <b class="sectionheader">CMPUT 404</b>
 
@@ -178,6 +221,8 @@
                     and Javascript. I'm also getting experience doing code reviews and ticket management.
                 </p>
 
+                <hr>
+                
                 <b class="sectionheader">CMPUT 403</b>  
                 
                 <p class="coursetext">
